@@ -4,7 +4,7 @@
   "private": true,
   "description": "BahasaJourney Android Capacitor application",
   "scripts": {
-    "sync:web": "node -e \"require('fs').copyFileSync('../index.html','www/index.html')\"",
+    "sync:web": "node -e \"const fs=require('fs');fs.mkdirSync('www',{recursive:true});fs.copyFileSync('../index.html','www/index.html')\"",
     "android:init": "npm run sync:web && npx cap add android",
     "android:sync": "npm run sync:web && npx cap sync android",
     "android:open": "npx cap open android",
