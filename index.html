@@ -54,8 +54,8 @@ async function scheduleNativeReminders(){
  const [h,m]=(state.remind||'08:30').split(':').map(Number);
  await p.cancel({notifications:[{id:830},{id:1845},{id:9900}]});
  await p.schedule({notifications:[
- {id:830,title:'BahasaJourney · Morning lesson',body:'Review yesterday’s words, then learn 2–3 new Malay words with Arabic meanings.',schedule:{on:{hour:h,minute:m},repeats:true},smallIcon:'ic_stat_icon_config_sample'},
- {id:1845,title:'BahasaJourney · Evening review',body:'Review your Malay vocabulary and practice speaking with Arabic meanings.',schedule:{on:{hour:18,minute:45},repeats:true},smallIcon:'ic_stat_icon_config_sample'}
+ {id:830,title:'BahasaJourney · Morning lesson',body:'Review yesterday’s words, then learn 2–3 new Malay words with Arabic meanings.',schedule:{on:{hour:h,minute:m},repeats:true}},
+ {id:1845,title:'BahasaJourney · Evening review',body:'Review your Malay vocabulary and practice speaking with Arabic meanings.',schedule:{on:{hour:18,minute:45},repeats:true}}
  ]});
  localStorage.setItem('bj-native-reminders','enabled');
  updateNotify();return true
