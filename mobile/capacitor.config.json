@@ -1,0 +1,8 @@
+{
+  "appId": "com.nextgenz.bahasajourney",
+  "appName": "BahasaJourney",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  }
+}
